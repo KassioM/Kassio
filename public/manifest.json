@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kassio Portifólio",
+  "name": "Olá, meu nome é Kássio e esse é meu portifólio, tenho 13 anos e sou Desenvolvedor Front-End, com 3 anos de experiência no mercado.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#202024",
+  "background_color": "#121214"
 }
