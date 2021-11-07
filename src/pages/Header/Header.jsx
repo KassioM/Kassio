@@ -9,9 +9,16 @@ const Header = () => {
 
             <Navbar />
 
+            <div className="background-video">
+
+            <video autoplay="true" muted loop> 
+                <source src="https://res.cloudinary.com/kassio-company/video/upload/v1636302522/Kassio%20Portif%C3%B3lio/Coding_Background_Video_for_Websites_xlbpgm.mp4" type="video/mp4" />
+            </video>
+            </div>
+
             <div className="header" id="header" >
                 <div className="content-header">
-
+                    
                     <h1>Kássio Matheus</h1>
                     <div className="cargo-header">
                         <Typing className="content-cargo-header" >
@@ -36,6 +43,7 @@ const Header = () => {
                         </div>
 
                     </div>
+                    
 
                 </div>
             </div>

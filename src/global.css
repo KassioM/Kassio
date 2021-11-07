@@ -77,6 +77,8 @@ input, textarea, button {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 15;
 }
 
 .navbar a {
@@ -99,6 +101,10 @@ input, textarea, button {
   height: 93vh;
 }
 
+.content-header {
+  position: relative;
+}
+
 .header h1 {
   font-size: 120px;
   color: var(--text);
@@ -108,6 +114,26 @@ input, textarea, button {
 .header p {
   font-size: 20px;
   color: var(--text);
+}
+
+.background-video {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+.background-video video {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 991px) {
+  .background-video video {
+    object-fit: cover;
+  }
 }
 
 .cargo-1 {
@@ -150,28 +176,27 @@ input, textarea, button {
 
 .about {
   display: flex;
-  justify-content: center;
+  width: 100%;
   height: 100vh;
   align-items: center;
 }
 
 .box-about {
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 100%;
   padding: 50px;
-  border-radius: 50px;
   background: var(--primary);
 }
 
 .box-about h1 {
   color: var(--text);
-  font-size: 40px;
+  font-size: 50px;
 }
 
 
 .box-about p {
   color: var(--text);
-  font-size: 16px;
+  font-size: 20px;
   margin-top: 1%;
 }
 
@@ -185,16 +210,75 @@ input, textarea, button {
 .redes-social-about {
   display: flex;
   align-items: center;
-  margin-top: 3%;
+  position: absolute;
+  top: 80%;
 }
 
 .redes-social-about a {
-  margin-right: 3%;
+  margin-right: 20%;
 }
 
 .redes-social-about i {
-  font-size: 30px;
+  font-size: 40px;
   color: var(--text);
+}
+
+.duvidas-frequentes {
+  width: 50%;
+  height: 100%;
+}
+
+.duvidas-frequentes img {
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+}
+
+.content-box-duvidas {
+  position: absolute;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+}
+
+
+.box-duvidas {
+  width: 500px;
+  border-radius: 20px;
+  height: 100%;
+  padding: 15px;
+  background: var(--primary);
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+.content-titile-duvida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-duvidas p {
+  font-size: 14px;
+  color: var(--text);
+  margin-right: 3%;
+}
+
+.box-duvidas i {
+  font-size: 10px;
+  color: var(--text);
+}
+
+.content-about-duvida {
+  margin-top: 3%;
+  text-align: center;
+}
+
+.content-about-duvida p {
+  font-size: 12px;
 }
 
 .technologies {
@@ -446,7 +530,73 @@ input, textarea, button {
 }
 
 .box-about {
-  height: 70%;
+  height: 100%;
+  padding: 100px;
+}
+
+.box-duvidas {
+  width: 600px;
+  height: 100%;
+  padding: 20px;
+}
+
+.content-titile-duvida p {
+  font-size: 20px;
+}
+
+.content-about-duvida p {
+  font-size: 18px;
+}
+}
+
+@media (max-width: 1235px) {
+  .box-about p {
+    color: var(--text);
+    font-size: 16px;
+    margin-top: 1%;
+}
+}
+
+@media (max-width: 1035px) {
+  .about {
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+.box-about h1 {
+  font-size: 45px;
+}
+
+.box-about p {
+  font-size: 16px;
+}
+
+.box-about {
+  width: 100%;
+}
+
+.content-box-duvidas {
+  width: 100%;
+  height: 50%;
+}
+
+.duvidas-frequentes {
+  width: 100%;
+  height: 100%;
+}
+
+.redes-social-about {
+  position: relative;
+  top: 3%;
+}
+
+.redes-social-about a {
+  margin-right: 5%;
+}
+
+.redes-social-about i {
+  font-size: 30px;
 }
 }
 
@@ -473,12 +623,29 @@ input, textarea, button {
   margin-right: 5%;
 }
 
+.duvidas-frequentes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.duvidas-frequentes {
+   width: 100%;
+  height: 60vh;
+}
+
+.box-duvidas {
+  width: 350px;
+}
+
+.content-box-duvidas {
+  width: 100%;
+  height: 100%;
+}
 
 .box-about {
-  width: 90%;
+  width: 100%;
   height: 100%;
-  padding: 30px;
-  border-radius: 28px;
 }
 
 .header h1 {
@@ -573,4 +740,44 @@ input, textarea, button {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+
+@media (max-width: 320px) {
+  .navbar a {
+    font-size: 12px;
+    margin-right: 3%;
+}
+
+.header h1 {
+  font-size: 45px;
+}
+
+.header p {
+  font-size: 10px;
+}
+
+.box-about h1 {
+  font-size: 35px;
+}
+
+.box-duvidas {
+  width: 255px;
+}
+
+.box-duvidas p {
+  font-size: 12px;
+}
+
+.content-about-duvida p  {
+  font-size: 10px;
+}
+
+.box-technologies {
+  width: 70%;
+}
+
+.box-technologies p {
+  font-size: 10px;
+}
 }
